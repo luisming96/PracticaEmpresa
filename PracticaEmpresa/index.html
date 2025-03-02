@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Web de Películas</title>
+    <link rel="stylesheet" href="Styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><button onclick="mostrarSeccion('inicio')">Inicio</button></li>
+                <li><button onclick="mostrarSeccion('peliculas')">Películas</button></li>
+                <li><button onclick="mostrarSeccion('detalles')">Detalles</button></li>
+                <li><button onclick="mostrarSeccion('contacto')">Contacto</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="grid-container">
+        <section id="inicio" class="seccion">
+            <h1>Bienvenidos a ONLYFILMS.</h1>
+            <p>Este es un sitio donde encontrarás información sobre las últimas películas en tendencia.</p>
+            <div class="imagen-container">
+                <img src="./imagenes/logos-cine-1024x503.jpg" alt="Imagen1">
+            </div>
+            <p>Consulta más información en <a href="https://www.themoviedb.org/" target="_blank">TMDb</a>.</p>
+            <p> &copy; 2025 Mi Web de Películas</p>
+        </section>
+        
+        <section id="peliculas" class="seccion" style="display: none;">
+            <h1>Buscador de Peliculas</h1>
+
+            <form id="form-busqueda" class="busqueda">
+                <input type="text" id="buscador" placeholder="Buscar películas..." />
+                <button type="submit">Buscar</button>
+            </form>
+
+            <section id="resultados" class="seccion" style="display: none;">
+                <h2>Resultados de la búsqueda</h2>
+                <div id="resultados-busqueda" class="peliculas-grid"></div>
+            </section>
+            
+            <h1>En Cartelera</h1>
+            <div id="peliculas-cartelera" class="peliculas-grid"></div>
+
+            <p> &copy; 2025 Mi Web de Películas</p>
+        </section>
+        
+        <section id="detalles" class="seccion" style="display: none;">
+            <h1>Detalles de la Película</h1>
+            <div id="detalles-pelicula"></div>
+            <p> &copy; 2025 Mi Web de Películas</p>
+        </section>
+
+        <section id="contacto" class="seccion" style="display: none;">
+            <h1>Contacto</h1>
+            <p>Puedes contactarnos a través de este formulario.</p>
+            <form id="contacto-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?: [A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$">
+                <span id="error-nombre" class="error"></span>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="error-email"></span>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <span class="error" id="error-mensaje"></span>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            <p> &copy; 2025 Mi Web de Películas</p>
+        </section>
+    </main>
+</body>
+</html>
