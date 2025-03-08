@@ -49,3 +49,5 @@ Usa los botones del menú superior para alternar entre las secciones: **Inicio, 
 ## 🎨 Créditos  
 **Desarrollado por:** Luis Miguel Nuño Gutiérrez.  
 **API:** [The Movie Database (TMDb)](https://www.themoviedb.org/)
+🌍 [Ver Proyecto en Vercel](https://practica-empresa.vercel.app)
+
